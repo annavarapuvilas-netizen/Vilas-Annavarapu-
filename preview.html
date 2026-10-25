@@ -143,8 +143,7 @@ svg.art { color: var(--ink); overflow: visible; }
 .photo .h2 { margin-bottom: 1.5rem; }
 .photo .sub { margin: 0 0 2rem; }
 .mosaic { columns: 3 240px; column-gap: 16px; }
-.mosaic a { display: block; min-height: 180px; margin: 0 0 16px; break-inside: avoid; border-radius: 22px; overflow: hidden; background: var(--rose); border: var(--line) solid var(--ink); }
-.mosaic a:nth-child(4n+1) { border-radius: 999px 999px 22px 22px; }
+.mosaic a { display: block; min-height: 180px; margin: 0 0 16px; break-inside: avoid; border-radius: 4px; overflow: hidden; background: var(--rose); border: var(--line) solid var(--ink); }
 .mosaic img { width: 100%; height: auto; transition: transform .4s ease; }
 .mosaic a:hover img, .mosaic a:focus-visible img { transform: scale(1.04); }
 .edu { background: var(--sage); border-block: var(--line) solid var(--ink); }
@@ -183,6 +182,21 @@ footer { background: var(--paper); padding-block: 28px calc(28px + env(safe-area
 .nav-links { gap: .8rem; }
 .brand { font-size: 1.3rem; }
 }
+.hero .intro { font: 500 clamp(1.7rem, 3.4vw, 2.5rem)/1.2 var(--display); max-width: 26rem; margin: 1.4rem 0 2rem; }
+.nav-left { display: flex; align-items: center; gap: .9rem; min-width: 0; }
+.menu-btn { display: inline-flex; align-items: center; gap: .55rem; font: 700 .92rem/1 var(--body); background: var(--rose); color: var(--ink); border: var(--line) solid var(--ink); border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+.menu-btn:hover { background: var(--marigold); }
+.scrim { position: fixed; inset: 0; background: rgba(58,45,60,.35); opacity: 0; pointer-events: none; transition: opacity .25s ease; z-index: 30; }
+.scrim.open { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; top: 0; left: 0; bottom: 0; width: min(330px, 86vw); background: var(--rosewash); border-right: var(--line) solid var(--ink); z-index: 40; transform: translateX(-102%); visibility: hidden; transition: transform .3s ease, visibility 0s linear .3s; padding: calc(22px + env(safe-area-inset-top, 0px)) 26px calc(22px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: .2rem; overflow-y: auto; }
+.drawer.open { transform: none; visibility: visible; transition: transform .3s ease; }
+.drawer-x { align-self: flex-start; font: 700 .88rem/1 var(--body); background: transparent; color: var(--ink); border: var(--line) solid var(--ink); border-radius: 999px; padding: .55rem .9rem; cursor: pointer; margin-bottom: 1.4rem; }
+.drawer-x:hover { background: var(--marigold); }
+.drawer .note { margin-bottom: .6rem; }
+.drawer > a { font: 500 2.3rem/1.15 var(--display); font-style: italic; text-decoration: none; padding: .4rem 0; border-top: var(--line) solid var(--ink); }
+.drawer > a:hover { color: var(--terra); }
+.drawer .d-art { margin-top: auto; width: 150px; padding-top: 1.5rem; }
+@media (max-width: 560px) { .menu-btn { padding: .5rem .75rem; } .nav-left { gap: .6rem; } }
 </style>
 </head>
 <body>
@@ -198,23 +212,31 @@ footer { background: var(--paper); padding-block: 28px calc(28px + env(safe-area
 </svg>
 <nav class="nav" aria-label="Main">
 <div class="wrap nav-in">
+<div class="nav-left">
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 2C6 0 9 4 14 2S19 1 21 2"/><path d="M1 7C6 5 9 9 14 7S19 6 21 7"/><path d="M1 12C6 10 9 14 14 12S19 11 21 12"/></svg>Menu</button>
 <a class="brand" href="#top">Vilas Annavarapu</a>
+</div>
 <div class="nav-links">
-<a class="hot" href="#riverside">Riverside</a>
 <a href="#work">Work</a>
-<a href="#press">In the news</a>
-<a href="#photography">Photography</a>
-<a href="#education">Education</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 </nav>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Sections" aria-hidden="true">
+<button class="drawer-x" type="button">Close</button>
+<p class="note">more to explore</p>
+<a href="#riverside">Riverside</a>
+<a href="#press">In the news</a>
+<a href="#photography">Photography</a>
+<a href="#education">Education</a>
+<svg class="d-art art" viewBox="0 0 120 96" aria-hidden="true"><use href="#lotus"/></svg>
+</aside>
 <header class="hero" id="top">
 <div class="wrap hero-in">
 <div>
-<p class="note">policy · partnerships · worker ownership</p>
-<h1>Ownership for the people who live next to the <em>power.</em></h1>
-<p class="lead">I'm Vilas Annavarapu. I write policy, raise capital and convene coalitions so clean energy creates ownership and good jobs for the people who live next to it.</p>
+<h1>my name is <em>vilas annavarapu.</em></h1>
+<p class="intro">i'm working on clean energy and economic mobility.</p>
 <div class="cta">
 <a class="btn fill" href="#riverside">Meet Riverside Collective</a>
 <a class="btn" href="#work">See my work</a>
@@ -222,8 +244,7 @@ footer { background: var(--paper); padding-block: 28px calc(28px + env(safe-area
 </div>
 <div class="art-hero">
 <div class="arch arch-back"></div>
-<figure class="arch arch-main"><img src="photos/p1090012.jpg" alt="Photograph by Vilas Annavarapu" decoding="async"></figure>
-<figure class="arch arch-small"><img src="photos/p1080426.jpg" alt="Photograph by Vilas Annavarapu" decoding="async"></figure>
+<figure class="arch arch-main"><img src="photos/vilas.jpg" alt="Vilas Annavarapu smiling in a sunlit sandstone arcade" decoding="async"></figure>
 <svg class="deco d-mari art" viewBox="0 0 100 100" aria-hidden="true"><use href="#marigold"/></svg>
 <svg class="deco d-lotus art" viewBox="0 0 120 96" aria-hidden="true"><use href="#lotus"/></svg>
 <svg class="deco d-sprig art" viewBox="0 0 60 140" aria-hidden="true"><use href="#sprig"/></svg>
@@ -468,6 +489,17 @@ footer { background: var(--paper); padding-block: 28px calc(28px + env(safe-area
 <footer>
 <div class="wrap"><span>© <span id="year">2026</span> Vilas Annavarapu</span></div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+(function () {
+var btn = document.querySelector('.menu-btn'), drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim'), x = document.querySelector('.drawer-x');
+function setOpen(o) { drawer.classList.toggle('open', o); scrim.classList.toggle('open', o); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); drawer.setAttribute('aria-hidden', o ? 'false' : 'true'); if (o) { x.focus(); } else { btn.focus({ preventScroll: true }); } }
+btn.addEventListener('click', function () { setOpen(true); });
+x.addEventListener('click', function () { setOpen(false); });
+scrim.addEventListener('click', function () { setOpen(false); });
+drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { drawer.classList.remove('open'); scrim.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); drawer.setAttribute('aria-hidden', 'true'); }); });
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('open')) { setOpen(false); } });
+})();
+</script>
 </body>
 </html>
