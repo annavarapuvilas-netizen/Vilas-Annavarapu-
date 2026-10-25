@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vilas Annavarapu</title>
+<meta name="description" content="Vilas Annavarapu builds policy and partnerships for a just energy transition through worker ownership, community-driven capital and clean energy workforce pathways. Co-founder of Riverside Collective in Jackson, Mississippi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--ink: #0f1630;
+--paper: #f2f4fb;
+--white: #ffffff;
+--sun: #ffc52e;
+--river: #2a4be0;
+--leaf: #12a06c;
+--mute: #4b5472;
+--display: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+--body: "Public Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.65 var(--body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); font-variation-settings: "wdth" 80; margin: 0; line-height: .95; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+section[id], header[id] { scroll-margin-top: 64px; }
+.wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+.band { padding-block: clamp(56px, 9vw, 112px); }
+.eyebrow { display: inline-block; font: 700 .78rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; padding: .5rem .75rem; background: var(--sun); color: var(--ink); border-radius: 999px; }
+.h2 { font-size: clamp(2.6rem, 7.5vw, 5.6rem); font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; font: 700 1rem/1 var(--body); text-decoration: none; padding: 1rem 1.4rem; border-radius: 999px; border: 3px solid var(--ink); background: var(--white); color: var(--ink); transition: transform .15s ease, background .15s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn.river { background: var(--river); color: #fff; border-color: var(--river); }
+.btn.ink { background: var(--ink); color: #fff; }
+.nav { position: sticky; top: 0; z-index: 20; background: var(--ink); color: #fff; padding-top: env(safe-area-inset-top, 0px); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 58px; }
+.brand { font: 800 1.35rem/1 var(--display); font-variation-settings: "wdth" 80; text-decoration: none; text-transform: uppercase; letter-spacing: .01em; white-space: nowrap; }
+.nav-links { display: flex; gap: 1.25rem; overflow-x: auto; scrollbar-width: none; min-width: 0; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a { text-decoration: none; font: 500 .95rem/1 var(--body); white-space: nowrap; padding: .5rem 0; opacity: .88; }
+.nav-links a:hover { opacity: 1; text-decoration: underline; text-decoration-color: var(--sun); text-underline-offset: 6px; text-decoration-thickness: 3px; }
+.nav-links a.hot { color: var(--sun); opacity: 1; font-weight: 700; }
+.hero { padding-block: clamp(40px, 7vw, 88px) clamp(56px, 8vw, 100px); overflow: hidden; }
+.hero-in { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hero h1 { font-size: clamp(3.1rem, 9.2vw, 7.4rem); font-weight: 800; text-transform: uppercase; letter-spacing: -.015em; margin-top: 1.25rem; }
+.hero h1 mark { background: var(--sun); color: var(--ink); padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hero .lead { font-size: clamp(1.1rem, 2.2vw, 1.3rem); color: var(--mute); max-width: 34rem; margin: 1.5rem 0 2rem; }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.prints { position: relative; aspect-ratio: 1 / 1.05; max-width: 480px; margin-inline: auto; width: 100%; }
+.print { position: absolute; background: #fff; padding: 8px; box-shadow: 0 10px 30px rgba(15,22,48,.22); border-radius: 4px; }
+.print img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+.p1 { width: 62%; aspect-ratio: 4/5; top: 0; left: 2%; transform: rotate(-4deg); }
+.p2 { width: 56%; aspect-ratio: 1; top: 16%; right: 0; transform: rotate(3deg); }
+.p3 { width: 54%; aspect-ratio: 5/4; bottom: 0; left: 14%; transform: rotate(-1.5deg); }
+.sticker { position: absolute; right: 2%; bottom: 8%; width: 7.6rem; height: 7.6rem; border-radius: 50%; background: var(--river); color: #fff; display: grid; place-items: center; text-align: center; font: 800 .95rem/1.05 var(--display); font-variation-settings: "wdth" 80; text-transform: uppercase; padding: .5rem; transform: rotate(10deg); box-shadow: 0 8px 20px rgba(15,22,48,.3); }
+.stats { background: var(--sun); }
+.stats-in { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding-block: clamp(36px, 6vw, 64px); }
+.stats strong { display: block; font: 800 clamp(2.8rem, 6.4vw, 5.2rem)/.9 var(--display); font-variation-settings: "wdth" 78; letter-spacing: -.02em; }
+.stats span { display: block; margin-top: .6rem; font-weight: 500; max-width: 17rem; }
+.riverside { background: var(--river); color: #fff; overflow: hidden; }
+.riverside .h2 { font-size: clamp(3.2rem, 11vw, 9rem); margin: 1.25rem 0 1.5rem; }
+.rv-lead { font-size: clamp(1.25rem, 2.6vw, 1.75rem); line-height: 1.4; max-width: 44rem; font-weight: 500; margin: 0; }
+.rv-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(28px, 5vw, 64px); margin-top: clamp(36px, 6vw, 64px); align-items: start; }
+.rv-story p { margin: 0 0 1.2em; max-width: 38rem; color: #e8edff; }
+.rv-story p:first-child::first-line { font-weight: 700; color: #fff; }
+.facts { background: var(--white); color: var(--ink); border-radius: 18px; padding: clamp(20px, 3vw, 32px); border: 4px solid var(--sun); }
+.facts h3 { font-size: 1.7rem; text-transform: uppercase; margin-bottom: 1rem; }
+.facts dl { margin: 0; display: grid; gap: .9rem; }
+.facts dt { font: 700 .72rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--river); margin-bottom: .25rem; }
+.facts dd { margin: 0; }
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: clamp(36px, 6vw, 64px); }
+.pillar { background: var(--sun); color: var(--ink); padding: 1.5rem; border-radius: 18px; }
+.pillar:nth-child(2) { background: #fff; }
+.pillar:nth-child(3) { background: var(--leaf); color: #fff; }
+.pillar h3 { font-size: 1.9rem; text-transform: uppercase; margin-bottom: .6rem; }
+.pillar p { margin: 0; }
+.rv-links { margin-top: clamp(32px, 5vw, 56px); border-top: 3px solid #fff; padding-top: 1.5rem; }
+.rv-links h3 { font-size: 1.5rem; text-transform: uppercase; margin-bottom: .75rem; }
+.rv-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.rv-links a { font-weight: 700; text-underline-offset: 4px; text-decoration-thickness: 2px; text-decoration-color: var(--sun); }
+.rv-links span { color: #cdd7ff; font-size: .92rem; margin-left: .35rem; }
+.work .h2 { margin-bottom: 2rem; }
+.role { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1rem 2.5rem; border-top: 4px solid var(--ink); padding-block: 1.75rem 2.25rem; }
+.role .when { font: 800 1.7rem/1 var(--display); font-variation-settings: "wdth" 80; text-transform: uppercase; }
+.role .where { color: var(--mute); margin-top: .5rem; font-size: .95rem; }
+.role h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); text-transform: uppercase; margin-bottom: .9rem; }
+.role ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .6rem; max-width: 46rem; }
+.role .tag { display: inline-block; margin-top: .9rem; font: 700 .78rem/1 var(--body); letter-spacing: .1em; text-transform: uppercase; background: var(--river); color: #fff; padding: .5rem .75rem; border-radius: 999px; text-decoration: none; }
+.press { background: var(--ink); color: #fff; }
+.press .eyebrow { margin-bottom: 1.25rem; }
+.press .h2 { margin-bottom: 2rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 18px; }
+.pcard { background: #fff; color: var(--ink); border-radius: 16px; padding: 1.4rem; display: flex; flex-direction: column; gap: .6rem; min-width: 0; }
+.pcard.sun { background: var(--sun); }
+.pcard .src { font: 700 .74rem/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--river); }
+.pcard.sun .src { color: var(--ink); }
+.pcard h3 { font-size: 1.55rem; line-height: 1; }
+.pcard h3 a { text-decoration: none; }
+.pcard h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.pcard p { margin: 0; font-size: .97rem; }
+.pcard .by { color: var(--mute); font-size: .86rem; margin-top: auto; }
+.cd { margin-top: clamp(40px, 6vw, 72px); }
+.cd h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); text-transform: uppercase; margin-bottom: .5rem; }
+.cd > p { margin: 0 0 1.25rem; color: #c3cbe6; }
+.cd ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.cd li { border-top: 1px solid rgba(255,255,255,.25); padding: 1rem 0; display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr); gap: .25rem 1.5rem; }
+.cd li:last-child { border-bottom: 1px solid rgba(255,255,255,.25); }
+.cd .m { font: 700 .78rem/1.5 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--sun); }
+.cd a { font-weight: 700; text-underline-offset: 4px; }
+.cd .d { display: block; color: #d6dcf2; font-size: .95rem; margin-top: .2rem; }
+.photo .h2 { margin-bottom: 2rem; }
+.mosaic { columns: 3 240px; column-gap: 14px; }
+.mosaic a { display: block; margin: 0 0 14px; break-inside: avoid; border-radius: 12px; overflow: hidden; background: #dfe3f2; }
+.mosaic img { width: 100%; height: auto; transition: transform .35s ease; }
+.mosaic a:hover img, .mosaic a:focus-visible img { transform: scale(1.04); }
+.edu { background: var(--white); }
+.edu .h2 { margin-bottom: 2rem; }
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 18px; }
+.edu-card { border: 4px solid var(--ink); border-radius: 18px; padding: 1.5rem; }
+.edu-card h3 { font-size: 1.8rem; text-transform: uppercase; margin-bottom: .5rem; }
+.edu-card .meta { color: var(--river); font-weight: 700; font-size: .9rem; margin: 0 0 .75rem; }
+.edu-card p { margin: 0; }
+.focus { margin-top: clamp(36px, 6vw, 64px); }
+.focus h3 { font-size: 1.6rem; text-transform: uppercase; margin-bottom: 1rem; }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.chips li { padding: .6rem 1rem; border-radius: 999px; background: var(--paper); border: 2px solid var(--ink); font-weight: 500; }
+.chips li:nth-child(3n+1) { background: var(--sun); }
+.chips li:nth-child(3n+2) { background: var(--river); color: #fff; border-color: var(--river); }
+.contact { background: var(--sun); }
+.contact .h2 { font-size: clamp(2.6rem, 8vw, 6.4rem); max-width: 16ch; }
+.contact p { font-size: 1.25rem; max-width: 36rem; margin: 1.25rem 0 2rem; }
+footer { background: var(--ink); color: #c3cbe6; padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); font-size: .92rem; }
+@media (max-width: 860px) {
+.hero-in, .rv-grid { grid-template-columns: minmax(0, 1fr); }
+.pillars { grid-template-columns: minmax(0, 1fr); }
+.role { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+.cd li { grid-template-columns: minmax(0, 1fr); }
+.prints { max-width: 380px; }
+}
+@media (max-width: 560px) {
+.stats-in { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.nav-links { gap: 1rem; }
+.brand { font-size: 1.1rem; }
+.sticker { width: 6.2rem; height: 6.2rem; font-size: .8rem; }
+}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+<div class="wrap nav-in">
+<a class="brand" href="#top">Vilas Annavarapu</a>
+<div class="nav-links">
+<a class="hot" href="#riverside">Riverside</a>
+<a href="#work">Work</a>
+<a href="#press">In the news</a>
+<a href="#photography">Photography</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="wrap hero-in">
+<div>
+<span class="eyebrow">Policy · Partnerships · Worker ownership</span>
+<h1>Ownership for the people who live next to the <mark>power.</mark></h1>
+<p class="lead">I'm Vilas Annavarapu. I write policy, raise capital and convene coalitions so clean energy creates ownership and good jobs for the people who live next to it.</p>
+<div class="cta">
+<a class="btn river" href="#riverside">Meet Riverside Collective</a>
+<a class="btn" href="#work">See my work</a>
+</div>
+</div>
+<div class="prints">
+<div class="print p1"><img src="photos/p1080426.jpg" alt="Photograph by Vilas Annavarapu" decoding="async"></div>
+<div class="print p2"><img src="photos/p1090012.jpg" alt="Photograph by Vilas Annavarapu" decoding="async"></div>
+<div class="print p3"><img src="photos/p1090077.jpg" alt="Photograph by Vilas Annavarapu" decoding="async"></div>
+<div class="sticker">Co-founder, Riverside</div>
+</div>
+</div>
+</header>
+<section class="stats" aria-label="Highlights">
+<div class="wrap stats-in">
+<div><strong>30+</strong><span>community organizations united behind Mississippi's first Just Transition plan</span></div>
+<div><strong>$200K+</strong><span>raised to launch a worker-owned coffeehouse</span></div>
+<div><strong>2</strong><span>state legislatures adopted policy I wrote (Colorado, Texas)</span></div>
+</div>
+</section>
+<section class="riverside band" id="riverside">
+<div class="wrap">
+<span class="eyebrow">The project I'm proudest of</span>
+<h2 class="h2">Riverside Collective</h2>
+<p class="rv-lead">A worker-owned coffee shop and ice cream bar in South Jackson, Mississippi, run by the students who work there.</p>
+<div class="rv-grid">
+<div class="rv-story">
+<p>Riverside began in a middle school classroom. As a Mississippi Teacher Corps fellow at Blackburn Middle School, I saw my students struggle to work as a team, and I fell in love with teaching them. I wanted to build a place where young people could practice working together and be paid fairly for it.</p>
+<p>So we built one. Riverside Collective is a nonprofit that turned an abandoned bank building into a coffeehouse and community hub, where young people run the business, earn a wage, and vote on how it operates and how profits are shared.</p>
+<p>I raised more than $200,000 to open the doors, designed the ownership structure, financial models and accounting systems, and built the entrepreneurship curriculum that teaches students to run and co-own a business as a way to build wealth. The long-term goal is for Riverside to become an incubator for other worker-owned businesses.</p>
+</div>
+<aside class="facts" aria-label="Riverside at a glance">
+<h3>At a glance</h3>
+<dl>
+<div><dt>Where</dt><dd>Terry Road, South Jackson, Mississippi, in a renovated former bank building</dd></div>
+<div><dt>Who runs it</dt><dd>Middle and high school students, who share in the profits</dd></div>
+<div><dt>How decisions get made</dt><dd>Workers and community members vote on operations and how profits are used</dd></div>
+<div><dt>Pay</dt><dd>Students are paid $15 an hour today, with a goal of $22</dd></div>
+<div><dt>Partners</dt><dd>New Horizon Ministries and Briarwood Arts Center</dd></div>
+<div><dt>Opened</dt><dd>Ribbon cutting in July 2025</dd></div>
+</dl>
+</aside>
+</div>
+<div class="pillars">
+<div class="pillar"><h3>Paid and co-owned</h3><p>Student workers earn a wage and share in the profits, so ownership is something they practice, not just study.</p></div>
+<div class="pillar"><h3>Learn by running it</h3><p>Teamwork and decision-making are learned by running the shop, with students at the table for the big calls.</p></div>
+<div class="pillar"><h3>Rooted in South Jackson</h3><p>We chose a neighborhood with untapped economic potential, where many people are nervous to open businesses.</p></div>
+</div>
+<div class="rv-links">
+<h3>Read about Riverside</h3>
+<ul>
+<li><a href="https://mississippitoday.org/2025/08/25/collective-cafe-helping-south-jackson-youth-become-confident-and-prepared-to-take-on-the-world/" target="_blank" rel="noopener">Collective cafe helping south Jackson youth become “confident and prepared to take on the world”</a><span>Mississippi Today · Aug 2025</span></li>
+<li><a href="https://www.wlbt.com/2025/07/15/non-profits-turn-abandoned-building-into-business-run-by-students/" target="_blank" rel="noopener">Non-profits turn abandoned building into a business run by students</a><span>WLBT · Jul 2025</span></li>
+<li><a href="https://mississippitoday.org/2023/09/02/photo-essay-vilas-annavarapu/" target="_blank" rel="noopener">Photo profile: Vilas Annavarapu</a><span>Mississippi Today · Sep 2023</span></li>
+<li><a href="https://www.jeffersonscholars.org/news/jefferson-scholar-alumnus-has-created-innovative-way-teach-youth-mississippi" target="_blank" rel="noopener">Jefferson Scholar alumnus has created an innovative way to teach youth in Mississippi</a><span>Jefferson Scholars Foundation · Sep 2023</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="work band" id="work">
+<div class="wrap">
+<h2 class="h2">The work</h2>
+<article class="role">
+<div><div class="when">Jan 2024 – Aug 2025</div><div class="where">Great Plains Institute · Jackson, MS</div></div>
+<div>
+<h3>Environmental Justice Fellow</h3>
+<ul>
+<li>Unified 30+ community-based organizations to develop Mississippi's first Just Transition plan, mapping pathways for local ownership of clean energy and the jobs it creates.</li>
+<li>Wrote the environmental justice and workforce provisions of the Carbon Management Roadmaps adopted by the Colorado and Texas legislatures.</li>
+<li>Built workforce pipelines with developers, unions and school districts, including a welding and carbon-management training partnership in Vernon Parish, Louisiana.</li>
+<li>Designed the Carbon Action Alliance's Civic Toolkit for community benefit agreements and equitable stakeholder engagement.</li>
+</ul>
+</div>
+</article>
+<article class="role">
+<div><div class="when">Nov 2021 – Aug 2025</div><div class="where">Riverside Collective · Jackson, MS</div></div>
+<div>
+<h3>Co-Founder &amp; President</h3>
+<ul>
+<li>Raised $200,000+ to convert an abandoned bank building into a worker-owned coffeehouse and community hub, with student workers as co-owners.</li>
+<li>Designed the ownership structure, financial models and accounting systems so worker-owners share both accountability and upside.</li>
+<li>Built a student-entrepreneurship curriculum teaching high schoolers to run and co-own a business as a wealth-building strategy in South Jackson.</li>
+<li>Selected for the Annie E. Casey Foundation's inaugural Rising Leader for Results Fellowship.</li>
+</ul>
+<a class="tag" href="#riverside">See the Riverside story</a>
+</div>
+</article>
+<article class="role">
+<div><div class="when">May 2020 – May 2022</div><div class="where">Blackburn Middle School, Jackson Public Schools</div></div>
+<div>
+<h3>Mississippi Teacher Corps Fellow</h3>
+<ul>
+<li>Taught 6th grade computer science at a Title I school; named Teacher of the Month.</li>
+<li>Coached football, ran a book club and organized an after-school athletics program for students not otherwise able to play school sports.</li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<section class="press band" id="press">
+<div class="wrap">
+<span class="eyebrow">Coverage</span>
+<h2 class="h2">In the news</h2>
+<div class="cards">
+<article class="pcard sun">
+<span class="src">Mississippi Today</span>
+<h3><a href="https://mississippitoday.org/2025/08/25/collective-cafe-helping-south-jackson-youth-become-confident-and-prepared-to-take-on-the-world/" target="_blank" rel="noopener">Collective cafe helping south Jackson youth become “confident and prepared to take on the world”</a></h3>
+<p>Profiles Riverside Collective, the worker-owned coffee shop and ice cream bar I co-founded in a renovated former bank building in south Jackson. Also ran in the Delta Democrat-Times.</p>
+<span class="by">Maya Miller · Aug 25, 2025</span>
+</article>
+<article class="pcard">
+<span class="src">WLBT · Jackson, MS</span>
+<h3><a href="https://www.wlbt.com/2025/07/15/non-profits-turn-abandoned-building-into-business-run-by-students/" target="_blank" rel="noopener">Non-profits turn abandoned building into a business run by students</a></h3>
+<p>Coverage of the Riverside Collective ribbon cutting on Terry Road, a student-operated shop that shares profits with the young people who run it.</p>
+<span class="by">Jul 15, 2025</span>
+</article>
+<article class="pcard">
+<span class="src">Mississippi Today</span>
+<h3><a href="https://mississippitoday.org/2023/09/02/photo-essay-vilas-annavarapu/" target="_blank" rel="noopener">Photo profile: Vilas Annavarapu</a></h3>
+<p>How teaching at Blackburn Middle School in Jackson led me to start Riverside Collective and build an economy that pays people well and treats them with dignity. Also republished by OurTupelo.</p>
+<span class="by">Vickie D. King · Sep 2, 2023</span>
+</article>
+<article class="pcard">
+<span class="src">UVA Today</span>
+<h3><a href="https://news.virginia.edu/content/uva-graduate-heads-china-schwarzman-scholar" target="_blank" rel="noopener">UVA Graduate Heads to China as Schwarzman Scholar</a></h3>
+<p>On my Schwarzman Scholarship to Tsinghua University and my goal of building a clean-energy economy that works for all people.</p>
+<span class="by">Matt Kelly · Jan 15, 2025</span>
+</article>
+<article class="pcard">
+<span class="src">Jefferson Scholars Foundation</span>
+<h3><a href="https://www.jeffersonscholars.org/news/jefferson-scholar-alumnus-has-created-innovative-way-teach-youth-mississippi" target="_blank" rel="noopener">Jefferson Scholar alumnus has created an innovative way to teach youth in Mississippi</a></h3>
+<p>How Riverside Collective teaches Mississippi youth the principles of cooperative entrepreneurship through a worker-owned business.</p>
+<span class="by">Sep 6, 2023</span>
+</article>
+<article class="pcard">
+<span class="src">The Cavalier Daily</span>
+<h3><a href="https://www.cavalierdaily.com/article/2020/02/debate-consensus-affirms-political-involvement-of-cultural-organizations" target="_blank" rel="noopener">Debate consensus affirms political involvement of cultural organizations</a></h3>
+<p>As chair of UVA’s Asian Leaders Council, I organized and opened a student debate reflecting on Dr. King’s legacy and the role of cultural organizations in politics.</p>
+<span class="by">Emma Scales · Feb 3, 2020</span>
+</article>
+</div>
+<div class="cd">
+<h3>At UVA, in The Cavalier Daily</h3>
+<p>As chair of the Asian Leaders Council and a student leader at the University of Virginia.</p>
+<ul>
+<li><span class="m">Feb 2021</span><span><a href="https://www.cavalierdaily.com/article/2021/02/students-faculty-continue-decades-long-struggle-to-uplift-asian-american-studies" target="_blank" rel="noopener">Students, faculty continue decades-long struggle to uplift Asian American Studies</a><span class="d">Quoted as the Asian Leaders Council chair behind the 2018 report, on the gap between the University’s verbal commitments and the report’s vision.</span></span></li>
+<li><span class="m">Jan 2020</span><span><a href="https://www.cavalierdaily.com/article/2020/01/inelasticity-echo-chambers-and-edibles" target="_blank" rel="noopener">Inelasticity, echo-chambers — and edibles</a><span class="d">Mentions me introducing keynote speaker Roxane Gay at the MLK Community Celebration.</span></span></li>
+<li><span class="m">Oct 3, 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/10/asu-kicks-off-its-annual-not-a-model-minority-campaign" target="_blank" rel="noopener">ASU kicks off its annual “Not a Model Minority” campaign</a><span class="d">Sarah Rigazio. I spoke on the kickoff panel about how the model minority myth pits minority groups against each other and erases history.</span></span></li>
+<li><span class="m">Apr 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/04/asian-leaders-council-latinx-student-alliance-host-symposium-on-the-potential-of-expanding-ethnic-studies-at-the-university" target="_blank" rel="noopener">Asian Leaders Council, Latinx Student Alliance host symposium on the potential of expanding ethnic studies at the University</a><span class="d">I co-organized “We Are Not Invisible: A Case For Ethnic Studies” as chair of the Asian Leaders Council.</span></span></li>
+<li><span class="m">Apr 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/04/latinx-student-groups-launch-website-documenting-history-of-latinxhispanic-organizations-on-grounds" target="_blank" rel="noopener">Latinx student groups launch website documenting history of Latinx/Hispanic organizations on Grounds</a><span class="d">Quoted at the launch on why student-led archives matter for the stories the University leaves out.</span></span></li>
+<li><span class="m">Mar 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/03/public-editor-cavalier-daily-should-tell-more-multicultural-organizations-stories" target="_blank" rel="noopener">PUBLIC EDITOR: Cavalier Daily should tell more multicultural organizations’ stories</a><span class="d">Anna Higgins. The Public Editor’s column responds to my critique that the paper under-covered multicultural organizations’ own work.</span></span></li>
+<li><span class="m">Feb 20, 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/02/we-dont-have-safe-spaces-on-grounds-student-leaders-express-need-for-more-spaces-for-the-universitys-minority-population" target="_blank" rel="noopener">“We don’t have safe spaces on Grounds”: Student leaders express need for more spaces for the University’s minority population</a><span class="d">Ali Sullivan. I argued for better spaces for students of color, including academic ones such as an American Studies department.</span></span></li>
+<li><span class="m">Jan 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/01/student-advocacy-groups-respond-to-efforts-of-president-ryans-working-group" target="_blank" rel="noopener">Student advocacy groups respond to efforts of President Ryan’s working group</a><span class="d">I pushed for a less extractive relationship between the University and Charlottesville, with affordable housing as a priority.</span></span></li>
+<li><span class="m">Dec 21, 2018</span><span><a href="https://www.cavalierdaily.com/article/2018/12/uva-office-for-equal-opportunity-and-civil-rights-responds-to-student-reports-calling-for-institutional-change" target="_blank" rel="noopener">U.Va. Office for Equal Opportunity and Civil Rights responds to student reports calling for institutional change</a><span class="d">Daniel Gordon. I called for course offerings that reflect what students want to study and for a more accessible Asian Pacific American Studies minor.</span></span></li>
+<li><span class="m">Nov 2018</span><span><a href="https://www.cavalierdaily.com/article/2018/11/former-va-governors-appearance-on-grounds-draws-backlash-over-allegations-of-racism" target="_blank" rel="noopener">Former Va. governor’s appearance on Grounds draws backlash over allegations of racism</a><span class="d">I questioned the former governor directly about his opposition to a state MLK holiday and pressed for context and accountability.</span></span></li>
+<li><span class="m">Oct 2018</span><span><a href="https://www.cavalierdaily.com/article/2018/10/asian-leaders-council-releases-report-on-academic-reform" target="_blank" rel="noopener">Asian Leaders Council releases report on academic reform</a><span class="d">On releasing “We Are Not Invisible: A Report for Academic Reform,” calling for Asian American representation in the curriculum and faculty.</span></span></li>
+<li><span class="m">Oct 2018</span><span><a href="https://www.cavalierdaily.com/article/2018/10/upcoming-inaugural-event-recognizes-the-importance-of-sharing-stories" target="_blank" rel="noopener">Upcoming inaugural event recognizes the importance of sharing stories</a><span class="d">I volunteered in the StoryStream trailer, inviting students to share their stories ahead of the inauguration.</span></span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="photo band" id="photography">
+<div class="wrap">
+<h2 class="h2">Photography</h2>
+<div class="mosaic">
+<a href="photos/p1080426.jpg" target="_blank" rel="noopener"><img src="photos/p1080426.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1090012.jpg" target="_blank" rel="noopener"><img src="photos/p1090012.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1090077.jpg" target="_blank" rel="noopener"><img src="photos/p1090077.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1090078.jpg" target="_blank" rel="noopener"><img src="photos/p1090078.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1090128.jpg" target="_blank" rel="noopener"><img src="photos/p1090128.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1110103.jpg" target="_blank" rel="noopener"><img src="photos/p1110103.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1130282.jpg" target="_blank" rel="noopener"><img src="photos/p1130282.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1130299.jpg" target="_blank" rel="noopener"><img src="photos/p1130299.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1140915.jpg" target="_blank" rel="noopener"><img src="photos/p1140915.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1140938.jpg" target="_blank" rel="noopener"><img src="photos/p1140938.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1140942.jpg" target="_blank" rel="noopener"><img src="photos/p1140942.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1140946.jpg" target="_blank" rel="noopener"><img src="photos/p1140946.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1140959.jpg" target="_blank" rel="noopener"><img src="photos/p1140959.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1140960.jpg" target="_blank" rel="noopener"><img src="photos/p1140960.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150041.jpg" target="_blank" rel="noopener"><img src="photos/p1150041.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150049.jpg" target="_blank" rel="noopener"><img src="photos/p1150049.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150168.jpg" target="_blank" rel="noopener"><img src="photos/p1150168.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150217.jpg" target="_blank" rel="noopener"><img src="photos/p1150217.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150239.jpg" target="_blank" rel="noopener"><img src="photos/p1150239.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150259.jpg" target="_blank" rel="noopener"><img src="photos/p1150259.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150273.jpg" target="_blank" rel="noopener"><img src="photos/p1150273.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150447.jpg" target="_blank" rel="noopener"><img src="photos/p1150447.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150564.jpg" target="_blank" rel="noopener"><img src="photos/p1150564.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+<a href="photos/p1150609.jpg" target="_blank" rel="noopener"><img src="photos/p1150609.jpg" alt="Photograph by Vilas Annavarapu" loading="lazy" decoding="async"></a>
+</div>
+</div>
+</section>
+<section class="edu band" id="education">
+<div class="wrap">
+<h2 class="h2">Education</h2>
+<div class="edu-grid">
+<article class="edu-card">
+<h3>Tsinghua University</h3>
+<p class="meta">Schwarzman College · M.A. Global Affairs · 2025 – 2026</p>
+<p>Schwarzman Scholar. Research on industrial policy, green finance and governance for the United Nations Development Programme.</p>
+</article>
+<article class="edu-card">
+<h3>University of Mississippi</h3>
+<p class="meta">M.A. Teaching · 2020 – 2022</p>
+<p>Mississippi Teacher Corps Fellowship.</p>
+</article>
+<article class="edu-card">
+<h3>University of Virginia</h3>
+<p class="meta">B.A. Politics, Honors · 2016 – 2020</p>
+<p>Summa Cum Laude, Jefferson Scholar, Echols Scholar, Raven Society.</p>
+</article>
+</div>
+<div class="focus">
+<h3>Focus areas</h3>
+<ul class="chips">
+<li>Climate policy</li>
+<li>Carbon management</li>
+<li>Environmental justice</li>
+<li>Clean energy workforce</li>
+<li>Coalition building</li>
+<li>Cooperative ownership</li>
+<li>Community benefit agreements</li>
+<li>Capital raising</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="contact band" id="contact">
+<div class="wrap">
+<h2 class="h2">Let's talk.</h2>
+<p>Working on community ownership, clean energy workforce or climate policy? I'd like to hear about it.</p>
+<div class="cta">
+<a class="btn ink" href="mailto:vannavarapu@protonmail.com">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/vilas-annavarapu-08a2ab22a/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="wrap"><span>© <span id="year">2026</span> Vilas Annavarapu</span></div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
