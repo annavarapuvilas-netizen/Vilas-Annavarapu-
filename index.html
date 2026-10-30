@@ -267,6 +267,8 @@ section.riverside.band{overflow:clip}
 .rv-scenes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:40px 0 8px}
 .rv-scenes img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:var(--line) solid var(--ink);border-radius:4px}
 @media(max-width:760px){.rv-scenes{grid-template-columns:1fr 1fr}}
+/* narrow phones: keep the top bar on one line */
+@media (max-width:480px){.nav-in{gap:.6rem}.nav-links{gap:.7rem}.nav-links a{font-size:.86rem}.brand{font-size:1.15rem}.menu-btn{font-size:0;gap:0;padding:.7rem .85rem}}
 </style>
 </head>
 <body>
