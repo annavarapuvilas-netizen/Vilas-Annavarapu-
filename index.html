@@ -131,8 +131,8 @@ svg.art { color: var(--ink); overflow: visible; }
 .pcard h3 a:hover { text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 4px; }
 .pcard p { margin: 0; font-size: .96rem; }
 .pcard .by { color: var(--mute); font-size: .86rem; margin-top: auto; }
-.cd { margin-top: clamp(48px, 7vw, 88px); }
-.cd h3 { font-size: clamp(2rem, 4vw, 2.9rem); font-style: italic; margin-bottom: .4rem; }
+.cd { margin-top: 0; }
+.cd h3, .cd .cd-h { font-size: clamp(2rem, 4vw, 2.9rem); font-style: italic; margin-bottom: .4rem; }
 .cd > p { margin: 0 0 1.25rem; color: var(--mute); }
 .cd ul { list-style: none; margin: 0; padding: 0; }
 .cd li { border-top: var(--line) solid var(--ink); padding: 1rem 0; display: grid; grid-template-columns: minmax(0, 8.5rem) minmax(0, 1fr); gap: .25rem 1.5rem; }
@@ -322,6 +322,8 @@ section.riverside.band{overflow:clip}
   .ph-eq{grid-template-columns:1fr}
   .sun{width:60px;height:60px}
 }
+.creds{margin:-.3rem 0 1.5rem;font:600 1.5rem/1.2 var(--hand);color:var(--terra)}
+.creds a{color:inherit;text-underline-offset:4px;text-decoration-color:var(--terra)}
 </style>
 </head>
 <body>
@@ -352,7 +354,7 @@ section.riverside.band{overflow:clip}
 <button class="drawer-x" type="button">Close</button>
 <p class="note">more to explore</p>
 <a href="#riverside">Riverside</a>
-<a href="#press">In the news</a>
+<a href="#press">At UVA</a>
 <a href="#photography">Photography</a>
 <a href="#education">Education</a>
 <svg class="d-art art" viewBox="0 0 120 96" aria-hidden="true"><use href="#lotus"/></svg>
@@ -362,6 +364,7 @@ section.riverside.band{overflow:clip}
 <div>
 <h1>my name is <em>vilas annavarapu.</em></h1>
 <p class="intro">i'm working on clean energy and economic mobility.</p>
+<p class="creds">Jefferson Scholar · <a href="https://news.virginia.edu/content/uva-graduate-heads-china-schwarzman-scholar" target="_blank" rel="noopener">Schwarzman Scholar</a></p>
 <div class="cta">
 <a class="btn fill" href="#riverside">Meet Riverside Collective</a>
 <a class="btn" href="#gpi">See my clean energy work</a>
@@ -380,7 +383,7 @@ section.riverside.band{overflow:clip}
 </header>
 <section class="stats" aria-label="Highlights">
 <div class="wrap stats-in">
-<div class="stat"><span class="num"><svg class="ring" viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M14 44C10 16 62 6 110 10C160 14 190 36 174 62C152 86 52 90 22 68C12 60 10 52 14 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><strong>30+</strong></span><span class="t">community organizations united behind Mississippi's first Just Transition plan</span></div>
+<div class="stat"><span class="num"><svg class="ring" viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M14 44C10 16 62 6 110 10C160 14 190 36 174 62C152 86 52 90 22 68C12 60 10 52 14 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><strong>20+</strong></span><span class="t">community organizations united behind Mississippi's first Just Transition plan</span></div>
 <div class="stat"><span class="num"><svg class="ring" viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M14 44C10 16 62 6 110 10C160 14 190 36 174 62C152 86 52 90 22 68C12 60 10 52 14 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><strong>$200K+</strong></span><span class="t">raised to launch a worker-owned coffeehouse</span></div>
 <div class="stat"><span class="num"><svg class="ring" viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M14 44C10 16 62 6 110 10C160 14 190 36 174 62C152 86 52 90 22 68C12 60 10 52 14 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><strong>2</strong></span><span class="t">states adopted policy I wrote</span></div>
 </div>
@@ -407,7 +410,7 @@ section.riverside.band{overflow:clip}
 <svg class="art" viewBox="0 0 100 150"><use href="#cone"/></svg>
 </div>
 </div>
-<p class="rv-lead">A worker-owned coffee shop and ice cream bar in South Jackson, Mississippi, run by the students and community members who work there.</p>
+<p class="rv-lead">A worker-owned coffee shop and ice cream bar in South Jackson, Mississippi, run by the students and shaped by our neighbors.</p>
 <div class="rv-grid">
 <div class="rv-story">
 <p>Riverside began in a middle school classroom. As a sixth grade teacher, I saw my students struggle to work as a team. I wanted to build a place where young people could practice working together, apply the skills they were learning in a classroom, and make change in their community.</p>
@@ -559,26 +562,12 @@ section.riverside.band{overflow:clip}
 </section>
 <section class="press band" id="press">
 <div class="wrap">
-<h2 class="h2">In the news</h2>
-<div class="cards">
-<article class="pcard">
-<span class="src">UVA Today</span>
-<h3><a href="https://news.virginia.edu/content/uva-graduate-heads-china-schwarzman-scholar" target="_blank" rel="noopener">UVA Graduate Heads to China as Schwarzman Scholar</a></h3>
-<p>On my Schwarzman Scholarship to Tsinghua University and my goal of building a clean-energy economy that works for all people.</p>
-<span class="by">Jan 15, 2025</span>
-</article>
-<article class="pcard">
-<span class="src">The Cavalier Daily</span>
-<h3><a href="https://www.cavalierdaily.com/article/2020/02/debate-consensus-affirms-political-involvement-of-cultural-organizations" target="_blank" rel="noopener">Debate consensus affirms political involvement of cultural organizations</a></h3>
-<p>As chair of UVA’s Asian Leaders Council, I organized and opened a student debate reflecting on Dr. King’s legacy and the role of cultural organizations in politics.</p>
-<span class="by">Feb 3, 2020</span>
-</article>
-</div>
 <div class="cd">
-<h3>At UVA, in The Cavalier Daily</h3>
+<h2 class="cd-h">At UVA, in The Cavalier Daily</h2>
 <p>As chair of the Asian Leaders Council and a student leader at the University of Virginia.</p>
 <ul>
 <li><span class="m">Feb 2021</span><span><a href="https://www.cavalierdaily.com/article/2021/02/students-faculty-continue-decades-long-struggle-to-uplift-asian-american-studies" target="_blank" rel="noopener">Students, faculty continue decades-long struggle to uplift Asian American Studies</a><span class="d">Quoted as the Asian Leaders Council chair behind the 2018 report, on the gap between the University’s verbal commitments and the report’s vision.</span></span></li>
+<li><span class="m">Feb 2020</span><span><a href="https://www.cavalierdaily.com/article/2020/02/debate-consensus-affirms-political-involvement-of-cultural-organizations" target="_blank" rel="noopener">Debate consensus affirms political involvement of cultural organizations</a><span class="d">As chair of UVA’s Asian Leaders Council, I organized and opened a student debate reflecting on Dr. King’s legacy and the role of cultural organizations in politics.</span></span></li>
 <li><span class="m">Jan 2020</span><span><a href="https://www.cavalierdaily.com/article/2020/01/inelasticity-echo-chambers-and-edibles" target="_blank" rel="noopener">Inelasticity, echo-chambers — and edibles</a><span class="d">Mentions me introducing keynote speaker Roxane Gay at the MLK Community Celebration.</span></span></li>
 <li><span class="m">Oct 3, 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/10/asu-kicks-off-its-annual-not-a-model-minority-campaign" target="_blank" rel="noopener">ASU kicks off its annual “Not a Model Minority” campaign</a><span class="d">I spoke on the kickoff panel about how the model minority myth pits minority groups against each other and erases history.</span></span></li>
 <li><span class="m">Apr 2019</span><span><a href="https://www.cavalierdaily.com/article/2019/04/asian-leaders-council-latinx-student-alliance-host-symposium-on-the-potential-of-expanding-ethnic-studies-at-the-university" target="_blank" rel="noopener">Asian Leaders Council, Latinx Student Alliance host symposium on the potential of expanding ethnic studies at the University</a><span class="d">I co-organized “We Are Not Invisible: A Case For Ethnic Studies” as chair of the Asian Leaders Council.</span></span></li>
