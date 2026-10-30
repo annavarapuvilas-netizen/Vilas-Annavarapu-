@@ -269,6 +269,65 @@ section.riverside.band{overflow:clip}
 @media(max-width:760px){.rv-scenes{grid-template-columns:1fr 1fr}}
 /* narrow phones: keep the top bar on one line */
 @media (max-width:480px){.nav-in{gap:.6rem}.nav-links{gap:.7rem}.nav-links a{font-size:.86rem}.brand{font-size:1.15rem}.menu-btn{font-size:0;gap:0;padding:.7rem .85rem}}
+/* ---- clean energy: a path to a just transition ---- */
+.gpi.band{overflow:clip}
+.gpi.band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,227,168,0) 30%,#fbe3a8 100%);opacity:var(--gp,0);pointer-events:none}
+.trail{position:relative;padding-left:64px}
+.trail-rail{position:absolute;left:0;top:0;width:44px;height:100%;overflow:visible;pointer-events:none}
+.trail::before{content:"";position:absolute;left:21px;top:14px;bottom:14px;border-left:var(--line) dashed var(--ink);opacity:.45}
+.js .trail::before{display:none}
+.stop{position:relative;padding-bottom:clamp(52px,7vw,92px)}
+.stop:last-child{padding-bottom:0}
+.stop::before{content:"";position:absolute;left:-51px;top:4px;width:18px;height:18px;box-sizing:border-box;border:var(--line) solid var(--ink);border-radius:50%;background:var(--paper);transition:background .4s,transform .4s}
+.stop.on::before{background:var(--terra);transform:scale(1.25)}
+.stop-label{font-family:'Caveat',cursive;font-size:1.4rem;line-height:1.1;color:var(--terra);margin:0}
+.stop h3.stop-title{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.8rem,3.4vw,2.4rem);line-height:1.1;margin:2px 0 10px}
+.stop-text{max-width:60ch;margin:0 0 22px}
+.trail-intro{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:32px;align-items:start}
+.trail-hint{font-family:'Caveat',cursive;font-size:1.4rem;color:var(--terra);margin:0}
+.ph{margin:0}
+.ph figcaption{font-family:'Caveat',cursive;font-size:1.2rem;line-height:1.2;color:var(--mute);margin-top:6px}
+.fr{display:block;width:100%;border:var(--line) solid var(--ink);border-radius:4px;object-fit:cover;background:var(--rosewash)}
+.intro-ph .fr{aspect-ratio:3/4}
+.ph-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ph-3 .fr{aspect-ratio:3/4}
+.ph-2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;align-items:stretch;margin-bottom:26px}
+.ph-2 .ph{display:flex;flex-direction:column}
+.ph-2 .fill .fr{flex:1;height:0;min-height:220px;object-position:50% 35%}
+.ph-2 .fr.tall{aspect-ratio:3/4}
+.ph-eq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ph-eq .fr{aspect-ratio:4/3}
+.gpi-writing{max-width:760px}
+.notes-label{font-family:'Caveat',cursive;font-size:1.3rem;color:var(--mute);margin:26px 0 8px}
+.notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 28px}
+.notes blockquote{margin:0;padding:16px 16px 18px;background:var(--marigold);border:var(--line) solid var(--ink);border-radius:4px;font-family:'Caveat',cursive;font-size:1.55rem;line-height:1.15;transform:rotate(-1.4deg)}
+.notes blockquote:nth-child(2){transform:rotate(1.1deg)}
+.notes blockquote:nth-child(3){transform:rotate(-.6deg)}
+.dest{padding-bottom:0}
+.sun{position:absolute;right:0;top:-8px;width:84px;height:84px}
+.js .sun{opacity:0;transform:translateY(26px) scale(.9);transition:opacity .9s,transform .9s}
+.js .dest.on .sun{opacity:1;transform:none}
+.dest-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;align-items:stretch}
+.dest-grid .fill{display:flex;flex-direction:column}
+.dest-grid .fill .fr{flex:1;height:0;min-height:260px;object-position:50% 40%}
+@media(max-width:820px){
+  .dest-grid{grid-template-columns:1fr}
+  .dest-grid .fill .fr{flex:none;height:auto;min-height:0;aspect-ratio:4/3}
+}
+@media(max-width:700px){
+  .trail{padding-left:52px}
+  .trail-intro{grid-template-columns:1fr}
+  .intro-ph{max-width:210px}
+  .ph-3{grid-template-columns:1fr 1fr}
+  .ph-3 .ph:nth-child(3){grid-column:1/-1}
+  .ph-3 .ph:nth-child(3) .fr{aspect-ratio:4/3}
+  .ph-2{grid-template-columns:1fr}
+  .ph-2 .fill .fr{flex:none;height:auto;min-height:0;aspect-ratio:4/3}
+  .ph-2 .ph:not(.fill){max-width:260px}
+  .ph-eq{grid-template-columns:1fr}
+  .notes{grid-template-columns:1fr}
+  .sun{width:60px;height:60px}
+}
 </style>
 </head>
 <body>
@@ -430,11 +489,38 @@ section.riverside.band{overflow:clip}
 </section>
 <section class="gpi band" id="gpi">
 <div class="wrap">
+<div class="trail" id="trail">
+<svg class="trail-rail" aria-hidden="true" focusable="false"></svg>
+<div class="stop start">
+<div class="trail-intro">
+<div>
 <p class="note">clean energy</p>
 <h2>Great Plains Institute</h2>
 <p class="gpi-lead">As the Environmental Justice Fellow at the Great Plains Institute in Jackson, I worked with Mississippi People's Movement members and the Carbon Action Alliance on what a clean energy transition could mean for communities across Mississippi, and on getting community voices into carbon management policy.</p>
-<div class="gpi-grid">
-<div class="gpi-card">
+<p class="trail-hint">follow the path: research, coalitions, learning, and the plan they led to</p>
+</div>
+<figure class="ph intro-ph"><img class="fr" src="photos/cle-gpi-sign.jpg" alt="Vilas giving a thumbs up beside the Great Plains Institute sign" loading="lazy"><figcaption>the trailhead</figcaption></figure>
+</div>
+</div>
+<div class="stop">
+<p class="stop-label">stop 1 · policy research</p>
+<h3 class="stop-title">Starting with the evidence</h3>
+<p class="stop-text">The work began with reading and research: what a clean energy transition could mean for communities across Mississippi, and how carbon management policy actually gets made.</p>
+<div class="ph-3">
+<figure class="ph"><img class="fr" src="photos/cle-podium.jpg" alt="Vilas at a podium at the Kleinman Center for Energy Policy" loading="lazy"><figcaption>at the Kleinman Center for Energy Policy</figcaption></figure>
+<figure class="ph"><img class="fr" src="photos/cle-doe.jpg" alt="A laptop showing the Department of Energy's Justice40 policy priority benefits" loading="lazy"><figcaption>studying DOE's Justice40 priorities</figcaption></figure>
+<figure class="ph"><img class="fr" src="photos/cle-books.jpg" alt="Four books on climate policy and economics on a wooden table" loading="lazy"><figcaption>the reading stack</figcaption></figure>
+</div>
+</div>
+<div class="stop">
+<p class="stop-label">stop 2 · building coalitions</p>
+<h3 class="stop-title">Many paths into one</h3>
+<p class="stop-text">Alongside Mississippi People's Movement members and the Carbon Action Alliance, the work was about connecting people, and getting community voices into carbon management policy.</p>
+<div class="ph-2">
+<figure class="ph fill"><img class="fr" src="photos/cle-lunch.jpg" alt="Vilas sharing a meal with two colleagues at a table during a gathering" loading="lazy"><figcaption>breaking bread together</figcaption></figure>
+<figure class="ph"><img class="fr tall" src="photos/cle-connect.jpg" alt="A colleague holding the CO2nnect sign for the Carbon Action Alliance's annual event" loading="lazy"><figcaption>CO2nnect, a Carbon Action Alliance event series</figcaption></figure>
+</div>
+<div class="gpi-card gpi-writing">
 <h3>Writing and talks</h3>
 <ul class="gpi-list">
 <li><span>Dec 10, 2024 · written by me</span><a href="https://carbonactionalliance.org/news-events/what-i-learned-from-the-mississippi-peoples-movement-aligning-climate-action-with-community-needs/" target="_blank" rel="noopener">What I Learned from the Mississippi People's Movement: Aligning Climate Action with Community Needs</a></li>
@@ -443,6 +529,28 @@ section.riverside.band{overflow:clip}
 <li><span>Feb 16, 2024 · about my fellowship</span><a href="https://carbonactionalliance.org/news-events/welcoming-our-first-environmental-justice-fellow/" target="_blank" rel="noopener">Welcoming Our First Environmental Justice Fellow</a></li>
 </ul>
 </div>
+</div>
+<div class="stop">
+<p class="stop-label">stop 3 · climate education</p>
+<h3 class="stop-title">Learning out loud, together</h3>
+<p class="stop-text">Climate learning sessions with Mississippi People's Movement members, from what an electric future could look like to the community's own priorities.</p>
+<div class="ph-eq">
+<figure class="ph"><img class="fr" src="photos/cle-convening-talk.jpg" alt="Vilas speaking into a microphone in front of a hand-drawn road map of the movement's year" loading="lazy"><figcaption>at the Climate Learning Convening</figcaption></figure>
+<figure class="ph"><img class="fr" src="photos/cle-electric.jpg" alt="A TV showing a presentation titled The Future is Electric, October 2024" loading="lazy"><figcaption>a session on "the future is electric"</figcaption></figure>
+</div>
+<p class="notes-label">notes from the flip charts</p>
+<div class="notes">
+<blockquote>prioritize people, not money.</blockquote>
+<blockquote>change response from response to liberation.</blockquote>
+<blockquote>must be mass movement pressure.</blockquote>
+</div>
+<figure class="gpi-video"><iframe src="https://www.youtube-nocookie.com/embed/8kkeWGY5qzw" title="Climate Learning Convening Recap!" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><figcaption>Climate Learning Convening recap</figcaption></figure>
+</div>
+<div class="stop dest">
+<svg class="sun" viewBox="0 0 84 84" aria-hidden="true" focusable="false"><circle cx="42" cy="42" r="16" fill="#fbe3a8" stroke="#3a2d3c" stroke-width="1.6"/><g stroke="#3a2d3c" stroke-width="1.6" stroke-linecap="round"><path d="M42 8v10M42 66v10M8 42h10M66 42h10M18 18l7 7M59 59l7 7M66 18l-7 7M25 59l-7 7"/></g></svg>
+<p class="stop-label">destination · a just transition</p>
+<h3 class="stop-title">Where the path leads</h3>
+<div class="dest-grid">
 <div class="gpi-card gpi-plan">
 <h3>Mississippi Just Transition Plan</h3>
 <p>February 2025. Compiled by the Mississippi People's Movement and the Great Plains Institute, a guide for future advocacy and organizing around climate in Mississippi.</p>
@@ -455,8 +563,10 @@ section.riverside.band{overflow:clip}
 </ol>
 <a class="btn fill" href="MS_Just_Transition_Plan.pdf" target="_blank" rel="noopener">Read the plan (PDF, 24 pages)</a>
 </div>
+<figure class="ph fill"><img class="fr" src="photos/cle-group-mural.jpg" alt="Vilas and Mississippi People's Movement members in matching navy shirts in front of a mural" loading="lazy"><figcaption>with Mississippi People's Movement members</figcaption></figure>
 </div>
-<figure class="gpi-video"><iframe src="https://www.youtube-nocookie.com/embed/8kkeWGY5qzw" title="Climate Learning Convening Recap!" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><figcaption>Climate Learning Convening recap</figcaption></figure>
+</div>
+</div>
 </div>
 </section>
 <section class="press band" id="press">
@@ -619,6 +729,29 @@ r.addEventListener('input',function(){stop();set(+r.value)});
 function stop(){if(raf){cancelAnimationFrame(raf);raf=null}btn.textContent='Play'}
 btn.addEventListener('click',function(){if(raf){stop();return}if(+r.value>=100){r.value=0;set(0)}btn.textContent='Pause';var s=performance.now(),from=+r.value,dur=(100-from)/100*28000;(function step(n){var k=Math.min(1,(n-s)/dur);r.value=from+(100-from)*k;set(+r.value);if(k<1)raf=requestAnimationFrame(step);else stop()})(s)});set(0)})();
 (function(){var d=document;d.documentElement.classList.add('js');var o=d.getElementById('rvOpen');if(!o)return;var mq=window.matchMedia('(prefers-reduced-motion: reduce)'),tick=false;function upd(){tick=false;if(mq.matches){o.style.removeProperty('--p');return}var r=o.getBoundingClientRect(),h=o.offsetHeight-window.innerHeight,p=h>0?Math.min(1,Math.max(0,-r.top/h)):1;var e=Math.min(1,p/0.8);e=e*e*(3-2*e);o.style.setProperty('--p',e.toFixed(4))}function req(){if(!tick){tick=true;requestAnimationFrame(upd)}}window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);upd()})();
+</script>
+<script>
+(function(){var tr=document.getElementById('trail');if(!tr)return;var svg=tr.querySelector('.trail-rail'),NS='http://www.w3.org/2000/svg',sec=tr.closest('.gpi'),stops=[].slice.call(tr.querySelectorAll('.stop')),mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+var walk,dot,br=[],L=0,ys=[],tick=false,ok=stops.length>1;
+function mk(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e}
+function build(){if(!ok)return;var H=tr.offsetHeight;svg.setAttribute('viewBox','0 0 44 '+H);while(svg.firstChild)svg.removeChild(svg.firstChild);
+ys=stops.map(function(s){return s.offsetTop+13});
+var d='M22,'+ys[0],side=1,i,j;
+for(i=0;i<ys.length-1;i++){var ya=ys[i],yb=ys[i+1],n=Math.max(1,Math.round((yb-ya)/230)),seg=(yb-ya)/n;for(j=0;j<n;j++){var y1=ya+j*seg,y2=y1+seg,x=22+side*14;d+=' C'+x+','+(y1+seg/3).toFixed(1)+' '+x+','+(y1+2*seg/3).toFixed(1)+' 22,'+y2.toFixed(1);side=-side}}
+svg.appendChild(mk('path',{d:d,fill:'none',stroke:'#3a2d3c','stroke-width':'1.6','stroke-dasharray':'2 7','stroke-linecap':'round',opacity:'.45'}));
+var y=ys[2]||ys[1];br=[mk('path',{d:'M58,'+(y-70)+' C42,'+(y-44)+' 28,'+(y-20)+' 22,'+y,fill:'none',stroke:'#3a2d3c','stroke-width':'1.4','stroke-dasharray':'2 6','stroke-linecap':'round',opacity:'.45'}),mk('path',{d:'M58,'+(y-30)+' C44,'+(y-22)+' 30,'+(y-9)+' 22,'+y,fill:'none',stroke:'#3a2d3c','stroke-width':'1.4','stroke-dasharray':'2 6','stroke-linecap':'round',opacity:'.45'})];br.forEach(function(b){svg.appendChild(b)});
+walk=mk('path',{d:d,fill:'none',stroke:'#3a2d3c','stroke-width':'1.8','stroke-linecap':'round'});svg.appendChild(walk);
+dot=mk('circle',{r:'5.5',fill:'#c4635b',stroke:'#3a2d3c','stroke-width':'1.6'});svg.appendChild(dot);
+L=walk.getTotalLength();walk.style.strokeDasharray=L;upd()}
+function upd(){tick=false;if(!ok||!walk)return;var r=tr.getBoundingClientRect(),cur=mq.matches?1e9:window.innerHeight*0.62-r.top,y0=ys[0],y1=ys[ys.length-1],f=Math.min(1,Math.max(0,(cur-y0)/(y1-y0)));
+walk.style.strokeDashoffset=L*(1-f);var p=walk.getPointAtLength(L*f);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);dot.style.opacity=(f>0&&f<1)?'1':'0';
+stops.forEach(function(s,i){s.classList.toggle('on',cur>=ys[i]-6)});
+var on2=cur>=(ys[2]||ys[1])-6;br.forEach(function(b){b.style.strokeDasharray=on2?'none':'2 6';b.setAttribute('opacity',on2?'.8':'.45')});
+var q=mq.matches?.7:Math.min(1,Math.max(0,(cur-ys[1])/(y1-ys[1])));sec.style.setProperty('--gp',(q*.9).toFixed(3))}
+function req(){if(!tick){tick=true;requestAnimationFrame(upd)}}
+window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',function(){build()});
+if(window.ResizeObserver){var t=0,ro=new ResizeObserver(function(){clearTimeout(t);t=setTimeout(build,120)});ro.observe(tr)}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(build);window.addEventListener('load',build);build()})();
 </script>
 </body>
 </html>
